@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import imageSelector from './Components/imgPresentation';
+import ImgPresentation from './Components/ImgPresentation';
 
 function App() {
 	return (
@@ -8,8 +7,7 @@ function App() {
 			<h1 className="text-3xl font-bold underline">
 				Hello. Wanna play a game?
 			</h1>
-
-			<imgPresentation imageSelector={imageSelector} />
+			<ImgPresentation/>
 		</div>
 	);
 }
