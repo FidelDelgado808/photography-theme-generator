@@ -1,11 +1,12 @@
+import React from 'react';
 import './App.css';
-import get_random_image from './Components/ImgPresentation';
+import ImgPresentation from './Components/ImgPresentation';
 
 function App() {
   return (
     <div className='App'>
-      <h1 className='text-3xl font-bold underline'>Hello. Wanna play a game?</h1>
-      <get_random_image />
+      <h1 className='text-4xl font-extrabold mb-4'>Photo theme generator</h1>
+      <ImgPresentation />
     </div>
   );
 }
