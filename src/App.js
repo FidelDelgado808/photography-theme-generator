@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import ImgPresentation from './Components/ImgPresentation';
+import DailyTheme from './Components/DailyTheme';
 
 function App() {
   return (
     <div className='App'>
-      <h1 className='text-4xl font-extrabold mb-4'>Photo theme generator</h1>
-      <ImgPresentation />
+      <DailyTheme />
     </div>
   );
 }

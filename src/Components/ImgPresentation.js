@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { flickrService } from '../Services/flickrService';
 
 export const ImgPresentation = () => {
   // state for storing selected image, starts as null
@@ -7,7 +6,6 @@ export const ImgPresentation = () => {
   // state for storing randomly selected index
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const [tagHotList, setTagHotList] = useState(null);
   // predefined array containing image urls
   const imageArray = [
     'https://lp-cms-production.imgix.net/image_browser/NEMO%20science%20museum%20Amsterdam.jpg?auto=format&q=75',
@@ -25,11 +23,11 @@ export const ImgPresentation = () => {
   function getRandomIndex() {
     let randomIndex = null;
     if (activeIndex) {
-      console.log('Entering with active index', activeIndex)
+      console.log('Entering with active index', activeIndex);
       randomIndex = activeIndex;
       do {
         randomIndex = Math.floor(Math.random() * imageArray.length);
-        console.log('Generated index:', randomIndex)
+        console.log('Generated index:', randomIndex);
       } while (randomIndex === activeIndex);
     } else {
       randomIndex = Math.floor(Math.random() * imageArray.length);
@@ -38,29 +36,18 @@ export const ImgPresentation = () => {
     return randomIndex;
   }
 
-  useEffect(() => {
-    async function getTagHotList () {
-      const tags = await flickrService.get().getTagHotList();
-      setTagHotList(tags);
-    }
-    getTagHotList();
-    }, []);
-
   // It runs on component load, and every time selectedImage changes
   // In the current state only runs once - it checks if selectedImage state has a value, if not it runs a function to set a valuu
-  
+
   useEffect(() => {
     if (!selectedImage) {
       selectRandomImage();
-      }
+    }
   }, [selectedImage]);
-
-  console.log(tagHotList)
-
-
 
   return (
     <div className='container flex flex-col items-center mx-auto'>
+      <h1 className='text-4xl font-extrabold mb-4'>Photo theme generator</h1>
       {selectedImage && (
         <img
           className='max-h-[50vh]'
@@ -74,14 +61,14 @@ export const ImgPresentation = () => {
           className='btn bg-slate-700 text-white p-3 rounded active:bg-slate-200'
           type='button'
           onClick={() => {
-            selectRandomImage()}
-          }
+            selectRandomImage();
+          }}
         >
           Randomize
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default ImgPresentation;
