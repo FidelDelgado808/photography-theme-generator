@@ -19,7 +19,8 @@ export const ImgPresentation = () => {
     setSelectedImage(imageArray[randomIndex]);
   }
 
-  // Gets random index of image from array and stores the latest index to to state. If latest index exists in state, keep getting new indices until the index is not the same as the latest.
+  // Gets random index of image from array and stores the latest index to to state. If latest index exists in state, 
+  // keep getting new indices until the index is not the same as the latest.
   function getRandomIndex() {
     let randomIndex = null;
     if (activeIndex) {
@@ -36,8 +37,8 @@ export const ImgPresentation = () => {
     return randomIndex;
   }
 
-  // It runs on component load, and every time selectedImage changes
-  // In the current state only runs once - it checks if selectedImage state has a value, if not it runs a function to set a valuu
+  // It runs on component load, and every time selectedImage changes.
+  // In the current state only runs once - it checks if selectedImage state has a value, if not it runs a function to set a value.
 
   useEffect(() => {
     if (!selectedImage) {
@@ -56,6 +57,15 @@ export const ImgPresentation = () => {
           src={selectedImage}
         />
       )}
+      <div>
+      <img
+          className='max-h-[50vh]'
+          id='image_shower'
+          alt='selected randomly from list'
+          src={selectedImage}
+        />
+
+      </div>
       <div className='buttonContainer mt-2'>
         <button
           className='btn bg-slate-700 text-white p-3 rounded active:bg-slate-200'

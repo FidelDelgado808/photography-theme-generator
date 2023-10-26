@@ -30,16 +30,16 @@ export default App;
     https://www.flickr.com/services/api/misc.urls.html
 
 - [ ] **Display 3 (or more) of these images at a time**
-  - Create a user interface to display a subset of the fetched images, with a minimum of 3 images visible.
+  - Create a user interface to display a subset of the fetched images, with a minimum of 3 images visible. FIDEL
 
 - [ ] **Add functionality to shuffle through images**
   - Implement image shuffling or cycling functionality for user interaction.
 
 - [ ] **Cache image URLs for better performance**
-  - Introduce image URL caching to enhance app performance by locally storing images.
+  - Introduce image URL caching to enhance app performance by locally storing images. FIDEL
 
 - [ ] **Improve image display and add functionality for image viewing like lightbox, zoom, etc.**
-  - Enhance the image display in the app, potentially adding features such as a lightbox or zoom.
+  - Enhance the image display in the app, potentially adding features such as a lightbox or zoom. FIDEL
 
 - [ ] **Review Flickr guidelines for displaying images**
   - Thoroughly review Flickr's guidelines for displaying images and user attribution.
