@@ -43,7 +43,7 @@ export default App;
 
 - [ ] **Review Flickr guidelines for displaying images**
   - Thoroughly review Flickr's guidelines for displaying images and user attribution.
-     https://www.flickr.com/services/developer/attributions/
+     https://www.flickr.com/services/developer/attributions/ FIDEL
 
 - [ ] **Archive of previous themes**
   - Create an archive or history of previous daily themes for reference or exploration by users.
