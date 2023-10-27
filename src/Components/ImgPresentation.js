@@ -19,7 +19,7 @@ export const ImgPresentation = () => {
     setSelectedImage(imageArray[randomIndex]);
   }
 
-  // Gets random index of image from array and stores the latest index to to state. If latest index exists in state, 
+  // Gets random index of image from array and stores the latest index to to state. If latest index exists in state,
   // keep getting new indices until the index is not the same as the latest.
   function getRandomIndex() {
     let randomIndex = null;
@@ -47,7 +47,7 @@ export const ImgPresentation = () => {
   }, [selectedImage]);
 
   return (
-    <div className='container flex flex-col items-center mx-auto'>
+    <div className='container grid grid-flow-col items-center mx-auto'>
       <h1 className='text-4xl font-extrabold mb-4'>Photo theme generator</h1>
       {selectedImage && (
         <img
@@ -58,13 +58,12 @@ export const ImgPresentation = () => {
         />
       )}
       <div>
-      <img
+        <img
           className='max-h-[50vh]'
           id='image_shower'
           alt='selected randomly from list'
           src={selectedImage}
         />
-
       </div>
       <div className='buttonContainer mt-2'>
         <button

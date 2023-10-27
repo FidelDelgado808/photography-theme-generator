@@ -36,7 +36,6 @@ const DailyTheme = () => {
             Theme of the day:
           </span>
           <span className='uppercase text-white font-bold text-3xl inline-block'>
-            {' '}
             {tagHotList.tag[0]._content}
           </span>
         </div>
@@ -44,10 +43,10 @@ const DailyTheme = () => {
       {tagImages && tagImages?.photo?.length > 0 && (
         <div>
           <div className='mb-2 text-white'>Images from theme of the day</div>
-          <div className='flex flex-col max-w-full'>
+          <div className=' flex flex-col max-h-full max-w-full'>
             {tagImages.photo.map((photo, idx) => (
-              <img
-                className='object-contain max-h-[45vh] mb-12 w-full'
+                  <img
+                className='object-contain max-h-[50vh] mb-12 w-full'
                 key={idx}
                 src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
               />
