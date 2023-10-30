@@ -46,16 +46,16 @@ const DailyTheme = () => {
           <div className=' flex flex-col max-h-full max-w-full'> <ul>
             {tagImages.photo.map((photo, idx) => ( 
 
-<li>
+<li                 key={idx}
+>
                   <img
                 className='object-contain max-h-[50vh] mb-12 w-full'
-                key={idx}
                 src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
               />
-<\li>
+</li>
 
             ))}
-<\ul>
+</ul>
           </div>
         </div>
       )}
